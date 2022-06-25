@@ -1,0 +1,27 @@
+timesteps:
+- '20200121.043000'
+timesteps_per_batch: 200
+subsample_ratio: 0.15
+unstacked_dims:
+    - z
+shuffle_timesteps: false
+shuffle_samples: false
+variable_names:
+- cos_zenith_angle
+- surface_geopotential
+- air_temperature
+- specific_humidity
+- latitude
+- dQ1
+- dQ2
+mapper_config:
+    function: open_nudge_to_fine
+    kwargs:
+        cache_size_mb: 4000
+        data_path: gs://vcm-ml-experiments/n2f-pire-sfc-updates/2022-01-21/nudged-run/fv3gfs_run/
+        nudging_variables:
+        - air_temperature
+        - specific_humidity
+        - x_wind
+        - y_wind
+        - pressure_thickness_of_atmospheric_layer

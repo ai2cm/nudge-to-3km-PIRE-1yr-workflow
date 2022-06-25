@@ -1,0 +1,7 @@
+timesteps:
+- '20200812.013000'
+timesteps_per_batch: 10
+mapper_config:
+    function: open_zarr
+    kwargs:
+        data_path: gs://vcm-ml-experiments/n2f-pire-sfc-updates/data/rad-train-test-data-time-centered-with-toa.zarr
