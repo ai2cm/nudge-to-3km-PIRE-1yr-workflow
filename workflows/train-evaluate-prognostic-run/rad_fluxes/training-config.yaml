@@ -10,11 +10,20 @@
       local_download_path: train-data-download-dir
     hyperparameters:
       callbacks:
+      - name: EpochModelCheckpoint
+        kwargs:
+          filepath:  model_checkpoints/epoch_{epoch:02d}.h5
+          save_weights_only: false
+          save_freq: epoch
+          mode: auto
+          period: 10
       - kwargs: {}
         name: WandbCallback
       - kwargs:
           monitor: val_loss
           patience: 15
+          restore_best_weights: true
+          min_delta: 0.00049
         name: EarlyStopping
       dense_network:
         depth: 3
@@ -37,7 +46,7 @@
       normalize_loss: true
       optimizer_config:
         kwargs:
-          learning_rate: 0.00014
+          learning_rate: 0.000049
         name: Adam
       output_variables:
         - shortwave_transmissivity_of_atmospheric_column        
@@ -49,7 +58,6 @@
             max: 1.
           override_for_time_adjusted_total_sky_downward_longwave_flux_at_surface:
             min: 0.
-      save_model_checkpoints: false
       training_loop:
         batch_size: 512
         epochs: 500

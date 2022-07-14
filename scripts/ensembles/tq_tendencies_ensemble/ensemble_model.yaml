@@ -1,0 +1,6 @@
+models:  # one or more model output directories
+  - gs://vcm-ml-experiments/n2f-pire-stable-ml/2022-05-12/tapering-effect-mae-no-taper/trained_models/tq_tendencies
+  - gs://vcm-ml-experiments/n2f-pire-stable-ml/2022-05-17/tapering-effect-mae-no-taper-seed-1/trained_models/tq_tendencies
+  - gs://vcm-ml-experiments/n2f-pire-stable-ml/2022-05-17/tapering-effect-mae-no-taper-seed-2/trained_models/tq_tendencies
+  - gs://vcm-ml-experiments/n2f-pire-stable-ml/2022-05-17/tapering-effect-mae-no-taper-seed-3/trained_models/tq_tendencies
+reduction: median  # can be "median" or "mean"

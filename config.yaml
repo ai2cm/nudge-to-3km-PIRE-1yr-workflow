@@ -1,0 +1,13 @@
+checkpoint_dir: model_checkpoints
+input_variables:
+- cos_zenith_angle
+- surface_geopotential
+- air_temperature
+- specific_humidity
+- latitude
+n_halo: 0
+output_variables:
+- shortwave_transmissivity_of_atmospheric_column
+- override_for_time_adjusted_total_sky_downward_longwave_flux_at_surface
+unstacked_dims: !!python/tuple
+- z
