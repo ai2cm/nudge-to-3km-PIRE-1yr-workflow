@@ -1,6 +1,11 @@
 *.pdf
+*.nc
 *.png
 *.eps
 *zarr
 *pyc
 tmp-config.yml
+notebooks/figures
+*-checkpoint.ipynb
+*/.ipynb_checkpoints
+*/__pycache__
