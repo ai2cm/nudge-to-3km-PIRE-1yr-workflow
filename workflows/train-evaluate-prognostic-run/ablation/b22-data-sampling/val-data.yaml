@@ -1,0 +1,23 @@
+timesteps:
+- '20200812.013000'
+- '20201219.223000'
+- '20201015.223000'
+- '20200406.223000'
+- '20200208.163000'
+- '20201215.133000'
+- '20201125.043000'
+- '20200725.163000'
+- '20201102.043000'
+timesteps_per_batch: 10
+unstacked_dims: 
+    - z
+mapper_config:
+    function: open_nudge_to_fine
+    kwargs:
+        data_path: gs://vcm-ml-experiments/n2f-pire-sfc-updates/2022-01-21/nudged-run/fv3gfs_run/
+        nudging_variables:
+        - air_temperature
+        - specific_humidity
+        - x_wind
+        - y_wind
+        - pressure_thickness_of_atmospheric_layer
