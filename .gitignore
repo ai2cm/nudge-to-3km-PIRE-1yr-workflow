@@ -2,10 +2,12 @@
 *.nc
 *.png
 *.eps
+*.tex
 *zarr
 *pyc
 tmp-config.yml
-notebooks/figures
+figure_notebooks/figures
 *-checkpoint.ipynb
 */.ipynb_checkpoints
 */__pycache__
+analysis_notebooks/
