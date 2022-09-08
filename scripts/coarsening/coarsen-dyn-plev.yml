@@ -1,0 +1,44 @@
+hi-res-data-vars:
+  - tb_coarse
+  - us_coarse
+  - vs_coarse
+  - vort200_coarse
+  - vort500_coarse
+  - vort850_coarse
+  - z500_coarse
+  - u200_coarse
+  - v200_coarse
+  - w500_coarse
+  - q1000_coarse
+  - q850_coarse
+  - q500_coarse
+  - t850_coarse
+  - t500_coarse
+  - t200_coarse
+  - u850_coarse
+  - u200_coarse
+rename_variables:
+  tb_coarse: TB
+  us_coarse: UGRDlowest
+  vs_coarse: VGRDlowest
+  vort200_coarse: VORT200
+  vort500_coarse: VORT500
+  vort850_coarse: VORT850
+  z500_coarse: h500
+  u200_coarse: u200
+  v200_coarse: v200
+  w500_coarse: w500
+  q1000_coarse: q1000
+  q850_coarse: q850
+  q500_coarse: q500
+  t850_coarse: TMP850
+  t500_coarse: TMP500
+  t200_coarse: TMP200
+  u850_coarse: UGRD850
+  u200_coarse: UGRD200
+target_resolution: 48
+rechunk:
+  tile: 6
+  time: 96
+  grid_xt: 48
+  grid_yt: 48

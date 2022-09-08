@@ -1,0 +1,16 @@
+chi-res-data-vars:
+  - PWAT_coarse
+  - VIL_coarse
+  - iw_coarse
+  - ps_coarse
+rename_variables:
+  PWAT_coarse: PWAT
+  VIL_coarse: VIL
+  iw_coarse: iw
+  ps_coarse: PRESsfc
+target_resolution: 48
+rechunk:
+  tile: 6
+  time: 96
+  grid_xt: 48
+  grid_yt: 48
