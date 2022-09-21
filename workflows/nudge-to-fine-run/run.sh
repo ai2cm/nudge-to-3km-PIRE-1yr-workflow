@@ -15,7 +15,7 @@ argo submit --from workflowtemplate/prognostic-run \
     -p bucket=${BUCKET} \
     -p project=${PROJECT} \
     -p tag=${TAG} \
-    -p config="$(< nudging-config-tq-only.yaml)" \
+    -p config="$(< nudging.yaml)" \
     -p segment-count=$SEGMENTS \
     -p memory="20Gi" \
     -p cpu="24" \
